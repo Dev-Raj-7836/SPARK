@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARK</title>
+    <style>
+        body {
+            background: black;
+            display: flex;
+            justify-content: center;
+        }
+
+        #msgBox:focus {
+            outline: none;
+        }
+
+        .user {
+            color: black;
+            display: flex;
+            justify-content: flex-end;
+            background: #4faf4f;
+            padding-right: 9px;
+            padding-block: 9px;
+            border-radius: 5px;
+        }
+
+        .cb {
+            color: #000000;
+            background-color: #008cff;
+            padding-left: 9px;
+            padding-block: 9px;
+            border-radius: 5px;
+            font-family: math;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f100;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 20px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chtbx" style="
+    background-color: #0a006b;
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    padding: 18px;
+    border: 1px solid #0095ff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 aqua;
+">
+        <div id="chat" style="
+        background-color: #a9d4ff;
+        /* width: 94%; */
+        height: 95%;
+        overflow-y: scroll;
+        padding-inline: 10px;
+        color: white;
+        border-radius: 5px;
+"></div>
+        <button style="
+    background-color: #49a3cb;
+    margin-top: 7px;
+    border: 0;
+    color: white;
+    height: 27px;
+    border-radius: 5px;
+    position: fixed;
+    margin-left: 5px;
+" onclick="send()">add</button>
+        <input type="text" id="msgBox" style="
+    height: 30px;
+    width: 94%;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 0;
+    padding-left: 44px;
+">
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer</title>
+</head>
+
+<body>
+    <div id="chtbx" style="
+    background-color: #e3e3e3;
+    position: fixed;
+    width: 46%;
+    height: 74%;
+    padding: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+">
+        <div id="chat" style="
+        background-color: #858383;
+    width: 100%;
+    height: 95%;
+    overflow-y: scroll;
+    padding-inline: 10px;
+"></div>
+        <button style="
+    background-color: #457f45;
+    margin-top: 10px;
+    border: 0;
+    color: white;
+    width: 100%;
+    height: 27px;
+    border-radius: 5px;
+" onclick="speak()">Speak</button>
+    </div>
+
+    <script>
+        var container = document.getElementById("chat");
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition = new SpeechRecognition();
+
+        function speak() {
+            recognition.start()
+        }
+        recognition.onresult = (event) => {
+            const current = event.resultIndex;
+            const transcript = event.results[current][0].transcript;
+            const textNode = document.createTextNode(transcript.toLowerCase());
+            const p = document.createElement('p');
+            p.appendChild(textNode);
+            container.appendChild(p);
+        }
+    </script>
+</body>
+
+</html>

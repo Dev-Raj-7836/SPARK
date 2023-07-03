@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Brain/styles.css">
+    <link rel="stylesheet" href="Brain/x.css">
+    <link rel="shortcut icon" href="Brain/Logo.gif" type="image/x-icon">
+    <title>S.P.A.R.K.</title>
+</head>
+
+<body>
+    <section class="main">
+        <input type="text" id="nameBox" maxlength="20" style="position: fixed;">
+        <button id="nameBoxButton" style="
+        padding: 5px;
+        position: fixed;
+        display: none;
+        z-index: 3;
+        margin-left: 140px;
+        border-radius: 17px;
+        border: 2px solid #1a80d9;
+        box-shadow: 0 0 20px 0 aqua;
+        background-color: #d9f1ff38;
+        text-align: center;
+        color: #1a80d9;">Done</button>
+        <div class="image-container">
+            <div class="image">
+                <img src="Logo.gif" alt="gif" draggable="false">
+            </div>
+            <p class="content2">
+            <h2 style="    
+                background-color: black;
+                stroke-width: 5px;
+                color: #055bb7;
+                text-shadow: -5px -2px 14px #1d05ff;
+                font-size: large;
+                text-align: center;"><a class="Spark" name="intro button" href="#">S.P.A.R.K.</a></p>
+        </div>
+        <div class="input">
+            <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+            <h1 class="content"> Click here to start or stop speaking </h1>
+            <!-- <h1 class="content2">_____________</h1> -->
+        </div>
+    </section>
+    <div id="popUpBox" style="display: none;">
+        <p id="popUp"></p>
+        <div style="
+        position: fixed;
+        top: 77%;
+        left: 27%;">
+            <button id="copy-button" onclick="copy(popUp)" style="
+                background-color: transparent;
+                color: aqua;
+                text-shadow: -3px -2px 4px #bccdff;
+                border: 0;
+                cursor: pointer;
+            ">copy</button>
+            <button id="close-button" onclick="closeBtn()" style="
+                background-color: transparent;
+                color: aqua;
+                text-shadow: -3px -2px 4px #bccdff;
+                border: 0;
+                cursor: pointer;
+            ">Close</button>
+        </div>
+
+    </div>
+    <div id="bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <button style="
+    position: fixed;
+    left: 2px;
+    top: 2px;
+    background: 0;
+    border: 0;
+" onclick="showHelpBox('helpCont')"><img src="images-removebg-preview.png" alt="help" name="help" style="
+    width: 20px;
+"></button>
+    <script src="Brain/code.js"></script>
+    <div id="helpCont" class="hide">
+        <h3 style="margin-bottom: 10px;">Salient Features</h3>
+        <p>- Smart voice search</p>
+        <p>- Hands free operation</p>
+        <p>- Basic calculation</p>
+        <h3 style="margin-block: 10px;">Commands</h3>
+        <p>- say 'open' to launch any website</p>
+        <p>- say 'calcuate or evalute this' to perform calculation</p>
+        <p>- say 'change my name' to change it</p>
+        <p>- say 'on youtube' to search there</p>
+    </div>
+</body>
+
+</html>

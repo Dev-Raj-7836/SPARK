@@ -1,0 +1,295 @@
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  overflow: hidden;
+  transition: 0.1s;
+  }
+  #mainCont{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: fixed;
+      z-index: -5;
+  }
+  #date{
+      background-color: rgb(255 255 255 / 0%);
+      border: 0px;
+      position: fixed;
+      right: 10px;
+      top: 10px;
+      text-align: center;
+      font-size: 15px;
+      font-family: math;
+      color: white;
+      
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none;
+    }
+  
+  #nameBox{
+      display: none;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      position: fixed;
+      height: 50px;
+      width: 200px;
+      border-radius: 17px;
+      border: 2px solid #1a80d9;
+      box-shadow: 0 0 20px 0 aqua;
+      background-color: #d9f1ff38;
+      text-align: center;
+      z-index: 3;
+      color: #1a80d9;
+      transition: 0.1s ease-in;
+  }  
+  input:focus{
+      outline: none;
+      position: fixed;
+      height: 50px;
+      width: 200px;
+      border-radius: 17px;
+      border: 2px solid #1a80d9;
+      box-shadow: 0 0 20px 0 aqua;
+      background-color: #d9f1fff7;
+      z-index: 3;
+  }  
+  #chatBox{
+      position: fixed;
+      width: 98%;
+      bottom: 0px;
+  }
+  ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background-color: #f1f1f100;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: #727cc3;
+      border-radius: 20px;
+      box-shadow: inset 0 0 4px 0 aqua;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+    .talk{
+      z-index: 5;
+      height: 263px;
+      width: 263px;
+      border-radius: 350px;
+      margin-left: 11px;
+      border: 0;
+      background: transparent;
+      cursor:pointer;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+  }
+  .face{
+    padding-left: 100px;
+  }
+  .body{
+    background-color: #000000;
+  }
+  .main {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  
+  .main .image-container {
+    padding: 10px;
+  }
+  
+  .main .image-container .image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main .image-container .image img {
+    width: 450px;
+    align-items: center;
+  }
+  
+  .main .image-container h1 {
+    color: #00bcd4;
+    text-align: center;
+    margin-bottom: 10px; 
+    font-size: 20px;
+  }
+  
+  .main .image-container p {
+    color: #0199ad;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .main .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 10vw;
+    border-radius: 10px;
+    background: rgb(0 25 26);
+    box-shadow: inset 0 0 20px 0px aqua;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding-left: 2%;
+  }
+  
+  .main .input .talk {
+    background: transparentss;
+    outline: none;
+    border: none;
+    width: 53vw;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+    position: fixed;
+  }
+  
+  .main .input .talk i {
+    font-size: 50px;
+    color: #000000;
+  }
+  
+  .main .input .content {
+    color: #aed0d0;
+    font-size: 1vw;
+    margin-right: 20px;
+  }
+  #popUp{
+    position: fixed;
+    height: 75%;
+    width: 45%;
+    border: 0;
+    background-color: #000;
+    box-shadow: 0 0 20px 0px aquamarine;
+    top: 10vh;
+    left: 25%;
+    overflow-y: scroll;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #cdd0ff;
+    text-align: center;
+    text-shadow: -3px -5px 4px #084eff;
+    border-radius: 10px;
+    transition: 0.1s ease-in;
+    overflow-x: hidden;
+  }
+  .popUpActive{
+    transition: 0.1s ease-in;
+    width: 50%;
+  }
+  .Spark{
+    text-decoration: none;
+    color: aqua;
+    text-shadow: -3px -1px 6px #8689ff, 2px -3px 3px #ff0000;
+  }
+  .Spark:hover{
+    text-decoration: none;
+    color: aqua;
+    text-shadow: -3px -1px 6px #ff0000, 2px -3px 3px #8689ff;
+  }
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+  display: flex;
+  justify-content: center;
+  }
+  
+  #bars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: -30px;
+  
+  }
+  
+  .bar {
+    background: #8dff9c;
+    box-shadow: 0px 0px 9px 0 aqua;
+    bottom: 1px;
+    height: 3px;
+    width: 10px;
+    margin: 0px 4px;
+    border-radius: 5px;
+    animation: sound 0ms -600ms linear infinite alternate;
+  }
+  
+  @keyframes sound {
+    0% {
+       opacity: .35;
+        height: 3px; 
+    }
+    100% {
+        opacity: 1;       
+        height: 70px;        
+    }
+  }
+  
+  .bar:nth-child(1)  { left: 1px; animation-duration: 474ms; }
+  .bar:nth-child(2)  { left: 15px; animation-duration: 433ms; }
+  .bar:nth-child(3)  { left: 29px; animation-duration: 407ms; }
+  .bar:nth-child(4)  { left: 43px; animation-duration: 458ms; }
+  .bar:nth-child(5)  { left: 57px; animation-duration: 400ms; }
+  .bar:nth-child(6)  { left: 71px; animation-duration: 427ms; }
+  .bar:nth-child(7)  { left: 85px; animation-duration: 441ms; }
+  .bar:nth-child(8)  { left: 99px; animation-duration: 419ms; }
+  .bar:nth-child(9)  { left: 113px; animation-duration: 487ms; }
+  .bar:nth-child(10) { left: 127px; animation-duration: 442ms; }
+  .bar:nth-child(11) { left: 127px; animation-duration: 400ms; }
+  .bar:nth-child(12) { left: 127px; animation-duration: 450ms; }
+  .bar:nth-child(13) { left: 127px; animation-duration: 442ms; }
+  .bar:nth-child(14) { left: 127px; animation-duration: 422ms; }
+  .bar:nth-child(15) { left: 127px; animation-duration: 412ms; }
+  
+  
+#helpCont{
+  background: #cfe9ff;
+    position: fixed;
+    left: -5px;
+    margin-top: 26px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    height: 500px;
+}
+.hide{
+    transform: translateX(-427vh);
+    transform: scaleX(50px)
+}
+  
